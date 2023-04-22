@@ -1,5 +1,5 @@
 const awesomeFunction = (req, res, next) => {
-    res.json('Awesome Person');
+    res.json('Kindness Osoh');
 };
 
 // to create another route
