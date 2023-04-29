@@ -5,10 +5,10 @@ async function apiFetch(url) {
   return data;
 }
 
-const getData = async () => {
-  const data = await apiFetch('http://localhost:8080/professional');
-  displayAllData(data);
-};
+// const getData = async () => {
+  // const data = await apiFetch('http://localhost:8080/professional');
+  // displayAllData(data);
+// };
 
 function displayAllData(data) {
   displayProfessionalName(data.professionalName);
