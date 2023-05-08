@@ -1,0 +1,31 @@
+
+###
+https://cse341-node-8g9e.onrender.com/awesome HTTP/1.1
+
+### week 2 personal assignment
+
+GET http://localhost:8080/  HTTP/1.1
+
+###
+
+GET http://localhost:8080/644d4da52a044d504b2466ea   HTTP/1.1
+###
+ 
+GET http://localhost:8080/644d510a2a044d504b2466eb  HTTP/1.1
+
+### 
+GET http://localhost:8080/644d515a2a044d504b2466ec  HTTP/1.1
+
+### render link
+
+ HTTP/1.1
+
+###
+/644d4da52a044d504b2466ea  HTTP/1.1
+
+###
+  HTTP/1.1
+
+###
+644d515a2a044d504b2466ec  HTTP/1.1
+
