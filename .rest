@@ -1,7 +1,62 @@
-get http://localhost:8080/temples/3 HTTP/1.1 
-apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
-
+# week 4 personal assignment
+GET http://localhost:8080/  HTTP/1.1
 
 ###
-GET https://nathan-byui-api.onrender.com/temples HTTP/1.1
-apiKey: Ezl0961tEpx2UxTZ5v2uKFK91qdNAr5npRlMT1zLcE3Mg68Xwaj3N8Dyp1R8IvFenrVwHRllOUxF0Og00l0m9NcaYMtH6Bpgdv7N
+GET http://localhost:8080/contacts
+
+### Create contact on local host
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Peaceman",
+    "lastName":"Igbojionu",
+    "email":"peace@gmail.com",
+    "favoriteColor":"Brown",
+    "birthday":"31/01/1995"
+}
+
+
+### PUT contact on local host based on user_id
+PUT http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Peace",
+    "lastName":"Egharevba",
+    "email":"peace@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"31/01/1991"
+}
+### DELETE contact
+DELETE http://localhost:8080/contacts HTTP/1.1
+
+// render Deploy for create, update and delete contacts
+### Create contact
+POST   HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Promise",
+    "lastName":"Igbojionu",
+    "email":"promsei@gmail.com",
+    "favoriteColor":"Brown",
+    "birthday":"31/01/1997"
+}
+
+
+### PUT contact
+PUT  HTTP/1.1
+content-type: application/json
+
+{
+   "firstName":"Promise",
+    "lastName":"Emmanuel",
+    "email":"promiseemmanuel@gmail.com",
+    "favoriteColor":"Yellow",
+    "birthday":"30/06/2000"
+}
+
+
+### DELETE contact
+DELETE  HTTP/1.1

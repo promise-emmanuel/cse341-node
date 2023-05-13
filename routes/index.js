@@ -1,14 +1,14 @@
 const routes = require('express').Router();
-const temple = require('./temple');
+const contacts = require('./contacts');
 const swagger = require('./swagger');
 
 routes.use('/', swagger);
-routes.use('/temples', temple);
+routes.use('/contacts', contacts);
 routes.use(
   '/',
   (docData = (req, res) => {
     let docData = {
-      documentationURL: 'https://nathanbirch.github.io/nathan-byui-api-docs',
+      documentationURL: '',
     };
     res.send(docData);
   })
