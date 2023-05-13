@@ -2,7 +2,7 @@
 GET http://localhost:8080/  HTTP/1.1
 
 ###
-GET http://localhost:8080/contacts
+GET http://localhost:8080/api-docs
 
 ### Create contact on local host
 POST http://localhost:8080/contacts HTTP/1.1
@@ -33,30 +33,30 @@ DELETE http://localhost:8080/contacts HTTP/1.1
 
 // render Deploy for create, update and delete contacts
 ### Create contact
-POST   HTTP/1.1
+POST https://project-week-4-api-documentation.onrender.com/contacts   HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Promise",
-    "lastName":"Igbojionu",
+    "firstName":"Kelvin",
+    "lastName":"abada",
     "email":"promsei@gmail.com",
-    "favoriteColor":"Brown",
-    "birthday":"31/01/1997"
+    "favoriteColor":"Brown-red",
+    "birthday":"21/11/1997"
 }
 
 
 ### PUT contact
-PUT  HTTP/1.1
+PUT https://project-week-4-api-documentation.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
-   "firstName":"Promise",
-    "lastName":"Emmanuel",
-    "email":"promiseemmanuel@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"30/06/2000"
+   "firstName":"Kelvin",
+    "lastName":"abada",
+    "email":"promsei@gmail.com",
+    "favoriteColor":"Brown-red",
+    "birthday":"21/11/1997"
 }
 
 
 ### DELETE contact
-DELETE  HTTP/1.1
+DELETE  https://project-week-4-api-documentation.onrender.com/contacts  HTTP/1.1
