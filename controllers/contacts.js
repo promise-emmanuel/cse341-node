@@ -2,14 +2,19 @@ const mongodb = require('../db_connection/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAllData = async (req, res) => {
+  try{
   const result = await mongodb.getDb().db().collection('contacts').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 };
 
 const getSingleData = async (req, res) => {
+  try {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
@@ -20,9 +25,13 @@ const getSingleData = async (req, res) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
   });
+} catch (err) {
+  res.status(500).json(err);
+}
 };
 
 const createContact = async (req, res) => {
+  try {
     const contact = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -36,9 +45,13 @@ const createContact = async (req, res) => {
     } else {
       res.status(500).json(response.error || 'Some error occurred while creating the contact.');
     }
+  } catch (err) {
+    res.status(500).json(err);
+  }
   };
   
   const updateContact = async (req, res) => {
+    try {
     const userId = new ObjectId(req.params.id);
     // be aware of updateOne if you only want to update specific fields
     const contact = {
@@ -59,9 +72,13 @@ const createContact = async (req, res) => {
     } else {
       res.status(500).json(response.error || 'Some error occurred while updating the contact.');
     }
+  } catch (err) {
+    res.status(500).json(err);
+  }
   };
   
   const deleteContact = async (req, res) => {
+    try {
     const userId = new ObjectId(req.params.id);
     const response = await mongodb.getDb().db().collection('contacts').deleteOne({ _id: userId }, true);
     console.log(response);
@@ -70,6 +87,9 @@ const createContact = async (req, res) => {
     } else {
       res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
     }
+  } catch (err) {
+    res.status(500).json(err);
+  }
   };
   
   module.exports = {
