@@ -5,10 +5,10 @@
     "description": "This API contains information about people in my contact list.",
     "version": "1.0.0"
   },
-  "host": "project-week-4-api-documentation.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
@@ -28,6 +28,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -86,6 +89,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
