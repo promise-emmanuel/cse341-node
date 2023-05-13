@@ -8,7 +8,7 @@ routes.use(
   '/',
   (docData = (req, res) => {
     let docData = {
-      documentationURL: '',
+      RenderURL: 'https://project-week-4-api-documentation.onrender.com/',
     };
     res.send(docData);
   })
